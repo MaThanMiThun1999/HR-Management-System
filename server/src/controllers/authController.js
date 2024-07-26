@@ -71,7 +71,7 @@ const login = async (req, res) => {
     }
 
     const token = generateToken(user._id);
-    res.cookie('token', token, { httpOnly: true },sameSite: 'None', secure: true);
+    res.cookie('token', token, { httpOnly: true, sameSite: 'None', secure: true });
 
     res.status(200).json({ 
       message: 'Login successful', 
