@@ -16,7 +16,8 @@ const generateSalarySlip = async (employee, salary, attendance) => {
         const pdfDoc = new PDFDocument({ size: 'A4', margin: 50 });
 
         // Define the path where the PDF will be saved
-      const pdfPath = path.resolve(__dirname, '..', 'uploads', 'PDF', `${employee.name.replace(/\s/g, '-')}-salary-${new Date(salary.date).getMonth() + 1}-${new Date(salary.date).getFullYear()}.pdf`);
+   const appDir = path.resolve(__dirname, '..');
+const pdfPath = path.join(appDir, 'uploads', 'PDF', `${employee.name.replace(/\s/g, '-')}-salary-${new Date(salary.date).getMonth() + 1}-${new Date(salary.date).getFullYear()}.pdf`);
 
         // Create a write stream to the specified path
         pdfDoc.pipe(fs.createWriteStream(pdfPath));
