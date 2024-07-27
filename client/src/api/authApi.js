@@ -2,6 +2,7 @@ import axiosInstance from "./axiosInstance";
 
 export const login = async (credentials) => {
   const response = await axiosInstance.post("/auth/login", credentials);
+  console.log(response);
   localStorage.setItem("token", response.data.token);
   localStorage.setItem("userData", response.data.user.name);
   axiosInstance.defaults.headers.common["Authorization"] = `Bearer ${response.data.token}`;

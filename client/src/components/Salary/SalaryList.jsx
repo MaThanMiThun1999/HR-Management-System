@@ -88,7 +88,7 @@ const SalaryList = () => {
                   </button>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                  <a href={`https://hr-management-backend-eczm.onrender.com/uploads/PDF/${employee.pdfUrl.split("\\").pop()}`} target="_blank" className="text-indigo-600 hover:text-indigo-900">
+                  <a href={`http://localhost:8080/uploads/PDF/${employee.pdfUrl.split("\\").pop()}`} target="_blank" className="text-indigo-600 hover:text-indigo-900">
                     View
                   </a>
                 </td>
