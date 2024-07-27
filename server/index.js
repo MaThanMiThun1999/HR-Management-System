@@ -30,7 +30,7 @@ const PORT = process.env.PORT || 3000;
 const VERSION = process.env.API_VERSION;
 
 const corsOptions = {
-  origin: 'http://localhost:5173',
+  origin: 'https://hr-management-frontend-6s23.onrender.com',
   credentials: true 
 };
 
